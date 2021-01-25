@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 com = {
     'extend': None,
 
@@ -669,6 +671,48 @@ bank = {
     'creation_date':            r'Creation Date:\s?(.+)',
     'expiration_date':          r'Registry Expiry Date:\s?(.+)',
     'updated_date':             r'Updated Date:\s?(.+)',
+}
+
+su = {
+    'extend': 'com',
+
+    'domain_name':				r'\ndomain:\s*(.+)',
+
+    'creation_date':			r'\ncreated:\s*(.+)',
+    'expiration_date':			r'\npaid-till:\s*(.+)',
+
+    'name_servers':				r'\nnserver:\s*(.+)',
+    'status':					r'\nstate:\s*(.+)',
+}
+
+ai = {
+    'extend': 'com',
+    'status': None
+}
+
+com_br = {
+    'extend': 'br'
+}
+
+tk = {
+    'extend': None,
+
+    'domain_name':				r'Domain name:\s*(\S+)',
+    'registrar':				r'Record maintained by:\s?(.+)',
+    'registrant':				r'Name:\s?(.+)',
+    'registrant_country':       r'Country:\s?(.+)',
+
+    'creation_date':			r'Domain registered:\s?(.+)',
+    'expiration_date':			r'Record will expire on:\s?(.+)',
+    'updated_date':				None,
+
+    'name_servers':				r'Domain Nameservers:\s*(.+)\s*',
+    'status':					r'Domain name:\s?(.+)',
+    'emails':					r'[\w.-]+@[\w.-]+\.[\w]{2,4}'
+}
+
+ly = {
+    'extend': 'com'
 }
 
 # Multiple initialization
